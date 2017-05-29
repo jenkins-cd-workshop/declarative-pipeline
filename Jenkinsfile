@@ -13,7 +13,7 @@ pipeline {
         sh 'echo Executing tests... | tee tests.log'
       }
     }
-    stage(‘Archive’) {
+    stage('Archive') {
       when {
         branch '*/master'
       }
