@@ -5,7 +5,7 @@ pipeline {
     SOME_PATH='/usr/local/bin/'
   }
   options {
-    timeout(6, HOURS)
+    timeout time:6, unit: HOURS
   }
   stages {
     stage('Test') {
