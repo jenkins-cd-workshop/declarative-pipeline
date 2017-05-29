@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Archive') {
       when {
-        branch 'master'
+        expression { !fileExists("experiment.txt") }
       }
       steps {
         archive 'tests.log'
