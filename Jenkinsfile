@@ -2,7 +2,7 @@
 pipeline {
   agent any
   environment {
-    SOME_PATH=/usr/local/bin/
+    SOME_PATH='/usr/local/bin/'
   }
   options {
     timeout(6, HOURS)
@@ -15,7 +15,7 @@ pipeline {
     }
     stage(‘Archive’) {
       when {
-        branch ‘*/master’
+        branch '*/master'
       }
       steps {
         archive 'tests.log'
