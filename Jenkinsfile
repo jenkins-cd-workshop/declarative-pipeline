@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Archive') {
       when {
-        branch '*/master'
+        branch 'master'
       }
       steps {
         archive 'tests.log'
